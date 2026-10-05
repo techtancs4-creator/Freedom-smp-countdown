@@ -125,7 +125,7 @@ $("copy").onclick = async () => {
     const t = document.createElement("textarea");
     t.value = txt; t.style.cssText = "position:fixed;opacity:0";
     document.body.appendChild(t); t.select();
-    try { document.execCommand("copy"); } catch (_) {}
+    try { document.execCommand("copy ip"); } catch (_) {}
     t.remove();
   }
   b.textContent = "COPIED!"; setTimeout(() => { b.textContent = "COPY"; }, 1500);
