@@ -69,7 +69,7 @@ body::before{content:"";position:fixed;inset:-20px;z-index:-1;background:var(--i
 </div>
 <script>
 // >>> LAUNCH TIME: change only this line. +05:30 = IST, so it is the same for everyone (22:59 = 10:59 PM).
-const LAUNCH = "2026-11-07T22:59:00+05:30";
+const LAUNCH = "2026-10-30T22:59:00+05:30";
 
 const t0 = new Date(LAUNCH).getTime();
 const $ = id => document.getElementById(id);
@@ -125,7 +125,7 @@ $("copy").onclick = async () => {
     const t = document.createElement("textarea");
     t.value = txt; t.style.cssText = "position:fixed;opacity:0";
     document.body.appendChild(t); t.select();
-    try { document.execCommand("copy ip"); } catch (_) {}
+    try { document.execCommand("copy"); } catch (_) {}
     t.remove();
   }
   b.textContent = "COPIED!"; setTimeout(() => { b.textContent = "COPY"; }, 1500);
